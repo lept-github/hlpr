@@ -26,14 +26,14 @@ describe('isJson', () => {
     expect(isJson(null)).toBe(false);
     expect(isJson(undefined)).toBe(false);
   });
-  test('should be true - none strict', () => {
+  test('should be true - non strict', () => {
     expect(isJson([1,2,3], false)).toBe(true);
     expect(isJson({test:[1,2,3]}, false)).toBe(true);
     expect(isJson('{"test":[1,2,3]}', false)).toBe(true);
     expect(isJson([], false)).toBe(true);
     expect(isJson({}, false)).toBe(true);
   });
-  test('should be false - none strict', () => {
+  test('should be false - non strict', () => {
     expect(isJson('{test:1234}', false)).toBe(false);
     expect(isJson('{"test:1234}', false)).toBe(false);
     expect(isJson('{{test:1234}', false)).toBe(false);

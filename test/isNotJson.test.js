@@ -26,7 +26,7 @@ describe('isNotJson', () => {
     expect(isNotJson({test:[1,2,3]})).toBe(false);
     expect(isNotJson('{"test":[1,2,3]}')).toBe(false);
   });
-  test('should be true - none strict', () => {
+  test('should be true - non strict', () => {
     expect(isNotJson('{test:1234}', false)).toBe(true);
     expect(isNotJson('{"test:1234}', false)).toBe(true);
     expect(isNotJson('{{test:1234}', false)).toBe(true);
@@ -44,7 +44,7 @@ describe('isNotJson', () => {
     expect(isNotJson(null, false)).toBe(true);
     expect(isNotJson(undefined, false)).toBe(true);
   });
-  test('should be false - none strict', () => {
+  test('should be false - non strict', () => {
     expect(isNotJson([1,2,3], false)).toBe(false);
     expect(isNotJson({test:[1,2,3]}, false)).toBe(false);
     expect(isNotJson('{"test":[1,2,3]}', false)).toBe(false);

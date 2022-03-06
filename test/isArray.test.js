@@ -12,12 +12,12 @@ describe('isArray', () => {
     expect(isArray(123)).toBe(false);
     expect(isArray(new Date())).toBe(false);
   });
-  test('should be true - none strict', () => {
+  test('should be true - non strict', () => {
     expect(isArray([1,2,3], false)).toBe(true);
     expect(isArray([1,{},'test'], false)).toBe(true);
     expect(isArray([], false)).toBe(true);
   });
-  test('should be false - none strict', () => {
+  test('should be false - non strict', () => {
     expect(isArray({}, false)).toBe(false);
     expect(isArray('', false)).toBe(false);
     expect(isArray(123, false)).toBe(false);

@@ -17,7 +17,7 @@ describe('isNumber', () => {
     expect(isNumber([])).toBe(false);
     expect(isNumber({})).toBe(false);
   });
-  test('should be true - none strict', () => {
+  test('should be true - non strict', () => {
     expect(isNumber(-1,false)).toBe(true);
     expect(isNumber(0,false)).toBe(true);
     expect(isNumber(1,false)).toBe(true);
@@ -27,7 +27,7 @@ describe('isNumber', () => {
     expect(isNumber('1',false)).toBe(true);
     expect(isNumber('1.1',false)).toBe(true);
   });
-  test('should be false - none strict', () => {
+  test('should be false - non strict', () => {
     expect(isNumber('abc', false)).toBe(false);
     expect(isNumber('', false)).toBe(false);
     expect(isNumber('--111', false)).toBe(false);

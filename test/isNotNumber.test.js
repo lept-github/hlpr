@@ -17,13 +17,13 @@ describe('isNotNumber', () => {
     expect(isNotNumber(1)).toBe(false);
     expect(isNotNumber(1.1)).toBe(false);
   });
-  test('should be true - none strict', () => {
+  test('should be true - non strict', () => {
     expect(isNotNumber('abc', false)).toBe(true);
     expect(isNotNumber('', false)).toBe(true);
     expect(isNotNumber('--111', false)).toBe(true);
     expect(isNotNumber('1,1',false)).toBe(true);
   });
-  test('should be false - none strict', () => {
+  test('should be false - non strict', () => {
     expect(isNotNumber(-1,false)).toBe(false);
     expect(isNotNumber(0,false)).toBe(false);
     expect(isNotNumber(1,false)).toBe(false);

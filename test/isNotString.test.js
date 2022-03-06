@@ -11,13 +11,13 @@ describe('isNotString', () => {
   test('should be false', () => {
     expect(isNotString('test')).toBe(false);
   });
-  test('should be true - none strict', () => {
+  test('should be true - non strict', () => {
     expect(isNotString(123, false)).toBe(true);
     expect(isNotString([], false)).toBe(true);
     expect(isNotString({}, false)).toBe(true);
     expect(isNotString(null, false)).toBe(true);
   });
-  test('should be false - none strict', () => {
+  test('should be false - non strict', () => {
     expect(isNotString('test', false)).toBe(false);
   });
 });

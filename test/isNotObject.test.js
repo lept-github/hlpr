@@ -11,14 +11,14 @@ describe('isNotObject', () => {
   test('should be false', () => {
     expect(isNotObject({test1:123, test2:()=>{}, test3:'test3'})).toBe(false);
   });
-  test('should be true - none strict', () => {
+  test('should be true - non strict', () => {
     expect(isNotObject([], false)).toBe(true);
     expect(isNotObject('', false)).toBe(true);
     expect(isNotObject(123, false)).toBe(true);
     expect(isNotObject(new Date(), false)).toBe(true);
     expect(isNotObject(()=>{}, false)).toBe(true);
   });
-  test('should be false - none strict', () => {
+  test('should be false - non strict', () => {
     expect(isNotObject({test1:123, test2:()=>{}, test3:'test3'}, false)).toBe(false);
     expect(isNotObject({}, false)).toBe(false);
   });

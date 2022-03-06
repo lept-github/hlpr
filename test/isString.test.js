@@ -11,11 +11,11 @@ describe('isString', () => {
     expect(isString({})).toBe(false);
     expect(isString(null)).toBe(false);
   });
-  test('should be true - none strict', () => {
+  test('should be true - non strict', () => {
     expect(isString('test', false)).toBe(true);
     expect(isString('', false)).toBe(true);
   });
-  test('should be false - none strict', () => {
+  test('should be false - non strict', () => {
     expect(isString(123, false)).toBe(false);
     expect(isString([], false)).toBe(false);
     expect(isString({}, false)).toBe(false);
