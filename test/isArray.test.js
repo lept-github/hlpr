@@ -1,6 +1,6 @@
 const { isArray } = require('../index');
 
-describe('isNumber', () => {
+describe('isArray', () => {
   test('should be true', () => {
     expect(isArray([1,2,3])).toBe(true);
     expect(isArray([1,{},'test'])).toBe(true);

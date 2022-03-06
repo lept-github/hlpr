@@ -1,6 +1,6 @@
 const { isFalse } = require('../index');
 
-describe('isString', () => {
+describe('isFalse', () => {
   test('should be true', () => {
     expect(isFalse(false)).toBe(true);
   });

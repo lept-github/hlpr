@@ -1,6 +1,6 @@
 const { isBinary } = require('../index');
 
-describe('isString', () => {
+describe('isBinary', () => {
   test('should be true', () => {
     expect(isBinary(true)).toBe(true);
     expect(isBinary(false)).toBe(true);

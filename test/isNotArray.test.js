@@ -1,6 +1,6 @@
 const { isNotArray } = require('../index');
 
-describe('isNumber', () => {
+describe('isNotArray', () => {
   test('should be true', () => {
     expect(isNotArray([])).toBe(true);
     expect(isNotArray({})).toBe(true);

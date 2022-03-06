@@ -1,6 +1,6 @@
 const { isBoolean } = require('../index');
 
-describe('isString', () => {
+describe('isBoolean', () => {
   test('should be true', () => {
     expect(isBoolean(true)).toBe(true);
     expect(isBoolean(false)).toBe(true);

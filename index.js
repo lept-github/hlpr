@@ -59,12 +59,17 @@ const isDecimal = val => {
   return val.toString().lastIndexOf('.') !== -1;
 };
 const isEven = val => {
-  if( isNotNumber(val) ){
-    return false;
+  if( isNumber(val) ){
+    return val % 2 === 0
   }
-  return val % 2 === 0
+  return false;
 };
-const isOdd = val => !isEven(val);
+const isOdd = val => {
+  if( isNumber(val) ){
+    return val % 2 !== 0
+  }
+  return false;
+};
 const isObject = (val, strictMode = true) => {
   strictMode = (strictMode === true);
 
