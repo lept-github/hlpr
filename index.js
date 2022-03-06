@@ -76,12 +76,13 @@ const isObject = (val, strictMode = true) => {
   if( isArray(val, false) ){ return false; }
   if( isDate(val) ){ return false; }
 
-  if( strictMode === false && typeof val === 'object' ){
-    return true;
-  }
-
-  if( strictMode === true && typeof val === 'object' ){
-    return (isArray(Object.keys(val)) === true);
+  if( val ){
+    if( strictMode === false && typeof val === 'object' ){
+      return true;
+    }
+    if( strictMode === true && typeof val === 'object' ){
+      return (isArray(Object.keys(val)) === true);
+    }
   }
 
   return false;
