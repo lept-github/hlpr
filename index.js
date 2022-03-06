@@ -35,6 +35,10 @@ const isNotBoolean = val => !isBoolean(val, strictMode);
 const isNumber = (val, strictMode = true) => {
   strictMode = (strictMode === true);
 
+  if( val === '' ){
+    return false
+  }
+
   if( typeof val === 'number' ){
     return true;
   }
