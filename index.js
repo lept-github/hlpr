@@ -137,7 +137,6 @@ const isType = val => {
   if( isFunction(val) ){ return 'function'; }
   if( isNumber(val) ){ return 'number'; }
   if( isBoolean(val) ){ return 'boolean'; }
-  if( isJson(val) ){ return 'json'; }
   return '';
 };
 
