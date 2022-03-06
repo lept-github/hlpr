@@ -2,14 +2,23 @@
   "name": "hlpr",
   "description": "Javascript helper functions",
   "homepage": "https://github.com/lept-github/hlpr#readme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
-  "scripts": {},
-  "keywords": ["javascript", "helper", "functions"],
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "javascript",
+    "helper",
+    "functions"
+  ],
   "author": "lept",
   "repository": {
     "type": "git",
     "url": "https://github.com/lept-github/hlpr"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
 }
