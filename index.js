@@ -31,7 +31,7 @@ const isBinary = val => {
   return [0,1,'0','1'].includes(val) === true;
 };
 const isBoolean = val => (isTrue(val) || isFalse(val));
-const isNotBoolean = val => !isBoolean(val, strictMode);
+const isNotBoolean = val => !isBoolean(val);
 const isNumber = (val, strictMode = true) => {
   strictMode = (strictMode === true);
 
