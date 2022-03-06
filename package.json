@@ -1,15 +1,15 @@
 {
   "name": "hlpr",
-  "description": "",
-  "homepage": "",
+  "description": "Javascript helper functions",
+  "homepage": "https://github.com/lept-github/hlpr#readme",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {},
-  "keywords": [],
+  "keywords": ["javascript", "helper", "functions"],
   "author": "lept",
   "repository": {
     "type": "git",
-    "url": "TBD"
+    "url": "https://github.com/lept-github/hlpr"
   },
-  "license": "ISC"
+  "license": "MIT"
 }
