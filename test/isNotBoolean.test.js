@@ -12,7 +12,10 @@ describe('isNotBoolean', () => {
     expect(isNotBoolean(123)).toBe(true);
     expect(isNotBoolean([])).toBe(true);
     expect(isNotBoolean({})).toBe(true);
+    expect(isNotBoolean(new Date())).toBe(true);
     expect(isNotBoolean(null)).toBe(true);
+    expect(isNotBoolean(undefined)).toBe(true);
+    expect(isNotBoolean(()=>{})).toBe(true);
   });
   test('should be false', () => {
     expect(isNotBoolean(true)).toBe(false);

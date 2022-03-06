@@ -15,5 +15,7 @@ describe('isDate', () => {
     expect(isDate([])).toBe(false);
     expect(isDate({})).toBe(false);
     expect(isDate(null)).toBe(false);
+    expect(isDate(undefined)).toBe(false);
+    expect(isDate(()=>{})).toBe(false);
   });
 });

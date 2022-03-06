@@ -2,6 +2,7 @@ const { isNotJson } = require('../index');
 
 describe('isNotJson', () => {
   test('should be true', () => {
+    expect(isNotJson('{1}')).toBe(true);
     expect(isNotJson('{test:1234}')).toBe(true);
     expect(isNotJson('{"test:1234}')).toBe(true);
     expect(isNotJson('{{test:1234}')).toBe(true);

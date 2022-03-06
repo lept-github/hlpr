@@ -7,6 +7,7 @@ describe('isJson', () => {
     expect(isJson('{"test":[1,2,3]}')).toBe(true);
   });
   test('should be false', () => {
+    expect(isJson('')).toBe(false);
     expect(isJson('{test:1234}')).toBe(false);
     expect(isJson('{"test:1234}')).toBe(false);
     expect(isJson('{{test:1234}')).toBe(false);
@@ -34,6 +35,7 @@ describe('isJson', () => {
     expect(isJson({}, false)).toBe(true);
   });
   test('should be false - non strict', () => {
+    expect(isJson('', false)).toBe(false);
     expect(isJson('{test:1234}', false)).toBe(false);
     expect(isJson('{"test:1234}', false)).toBe(false);
     expect(isJson('{{test:1234}', false)).toBe(false);

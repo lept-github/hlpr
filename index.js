@@ -35,9 +35,9 @@ const isNotBoolean = val => !isBoolean(val);
 const isNumber = (val, strictMode = true) => {
   strictMode = (strictMode === true);
 
-  if( val === '' ){
-    return false
-  }
+  if( isDate(val) ){ return false; }
+  if( isNull(val) ){ return false; }
+  if( val === '' ){ return false; }
 
   if( typeof val === 'number' ){
     return true;

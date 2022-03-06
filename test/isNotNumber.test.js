@@ -10,6 +10,10 @@ describe('isNotNumber', () => {
     expect(isNotNumber('1,1')).toBe(true);
     expect(isNotNumber([])).toBe(true);
     expect(isNotNumber({})).toBe(true);
+    expect(isNotNumber(null)).toBe(true);
+    expect(isNotNumber(undefined)).toBe(true);
+    expect(isNotNumber(new Date())).toBe(true);
+    expect(isNotNumber(()=>{})).toBe(true);
   });
   test('should be false', () => {
     expect(isNotNumber(-1)).toBe(false);
@@ -22,6 +26,10 @@ describe('isNotNumber', () => {
     expect(isNotNumber('', false)).toBe(true);
     expect(isNotNumber('--111', false)).toBe(true);
     expect(isNotNumber('1,1',false)).toBe(true);
+    expect(isNotNumber(null, false)).toBe(true);
+    expect(isNotNumber(undefined, false)).toBe(true);
+    expect(isNotNumber(new Date(), false)).toBe(true);
+    expect(isNotNumber(()=>{}, false)).toBe(true);
   });
   test('should be false - non strict', () => {
     expect(isNotNumber(-1,false)).toBe(false);

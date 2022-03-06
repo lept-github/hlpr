@@ -5,6 +5,7 @@ describe('isOdd', () => {
     expect(isOdd(1)).toBe(true);
     expect(isOdd(3)).toBe(true);
     expect(isOdd(5)).toBe(true);
+    expect(isOdd(7)).toBe(true);
   });
   test('should be false', () => {
     expect(isOdd(2)).toBe(false);
@@ -16,5 +17,8 @@ describe('isOdd', () => {
     expect(isOdd([])).toBe(false);
     expect(isOdd({})).toBe(false);
     expect(isOdd(null)).toBe(false);
+    expect(isOdd(undefined)).toBe(false);
+    expect(isOdd(()=>{})).toBe(false);
+    expect(isOdd(new Date())).toBe(false);
   });
 });

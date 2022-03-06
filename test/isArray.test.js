@@ -9,8 +9,12 @@ describe('isArray', () => {
     expect(isArray([])).toBe(false);
     expect(isArray({})).toBe(false);
     expect(isArray('')).toBe(false);
+    expect(isArray('test')).toBe(false);
     expect(isArray(123)).toBe(false);
     expect(isArray(new Date())).toBe(false);
+    expect(isArray(null)).toBe(false);
+    expect(isArray(undefined)).toBe(false);
+    expect(isArray(()=>{})).toBe(false);
   });
   test('should be true - non strict', () => {
     expect(isArray([1,2,3], false)).toBe(true);
@@ -20,7 +24,11 @@ describe('isArray', () => {
   test('should be false - non strict', () => {
     expect(isArray({}, false)).toBe(false);
     expect(isArray('', false)).toBe(false);
+    expect(isArray('test', false)).toBe(false);
     expect(isArray(123, false)).toBe(false);
     expect(isArray(new Date(), false)).toBe(false);
+    expect(isArray(null, false)).toBe(false);
+    expect(isArray(undefined, false)).toBe(false);
+    expect(isArray(()=>{}, false)).toBe(false);
   });
 });

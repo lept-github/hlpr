@@ -19,5 +19,7 @@ describe('isEmail', () => {
     expect(isEmail([])).toBe(false);
     expect(isEmail({})).toBe(false);
     expect(isEmail(null)).toBe(false);
+    expect(isEmail(undefined)).toBe(false);
+    expect(isEmail(()=>{})).toBe(false);
   });
 });

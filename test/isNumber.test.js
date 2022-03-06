@@ -16,6 +16,10 @@ describe('isNumber', () => {
     expect(isNumber('1,1')).toBe(false);
     expect(isNumber([])).toBe(false);
     expect(isNumber({})).toBe(false);
+    expect(isNumber(null)).toBe(false);
+    expect(isNumber(undefined)).toBe(false);
+    expect(isNumber(()=>{})).toBe(false);
+    expect(isNumber(new Date())).toBe(false);
   });
   test('should be true - non strict', () => {
     expect(isNumber(-1,false)).toBe(true);
@@ -32,5 +36,9 @@ describe('isNumber', () => {
     expect(isNumber('', false)).toBe(false);
     expect(isNumber('--111', false)).toBe(false);
     expect(isNumber('1,1',false)).toBe(false);
+    expect(isNumber(null,false)).toBe(false);
+    expect(isNumber(undefined,false)).toBe(false);
+    expect(isNumber(()=>{},false)).toBe(false);
+    expect(isNumber(new Date(),false)).toBe(false);
   });
 });

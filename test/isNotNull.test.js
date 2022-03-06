@@ -5,6 +5,7 @@ describe('isNotNull', () => {
     expect(isNotNull([])).toBe(true);
     expect(isNotNull({})).toBe(true);
     expect(isNotNull('')).toBe(true);
+    expect(isNotNull('null')).toBe(true);
     expect(isNotNull([1,2,3])).toBe(true);
     expect(isNotNull(true)).toBe(true);
     expect(isNotNull(false)).toBe(true);

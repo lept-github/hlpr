@@ -17,5 +17,7 @@ describe('isBoolean', () => {
     expect(isBoolean([])).toBe(false);
     expect(isBoolean({})).toBe(false);
     expect(isBoolean(null)).toBe(false);
+    expect(isBoolean(undefined)).toBe(false);
+    expect(isBoolean(()=>{})).toBe(false);
   });
 });

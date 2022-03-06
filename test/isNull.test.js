@@ -19,6 +19,7 @@ describe('isNull', () => {
     expect(isNull(function(){})).toBe(false);
     expect(isNull({test:123})).toBe(false);
     expect(isNull('test')).toBe(false);
+    expect(isNull('null')).toBe(false);
     expect(isNull(new Date())).toBe(false);
     expect(isNull(undefined)).toBe(false);
   });

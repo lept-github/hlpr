@@ -18,6 +18,7 @@ describe('isNotSet', () => {
     expect(isNotSet(1.1)).toBe(false);
     expect(isNotSet(()=>{})).toBe(false);
     expect(isNotSet(function(){})).toBe(false);
+    expect(isNotSet(()=>{})).toBe(false);
     expect(isNotSet({test:123})).toBe(false);
     expect(isNotSet('test')).toBe(false);
     expect(isNotSet(new Date())).toBe(false);

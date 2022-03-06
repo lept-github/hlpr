@@ -5,6 +5,7 @@ describe('isEven', () => {
     expect(isEven(2)).toBe(true);
     expect(isEven(4)).toBe(true);
     expect(isEven(6)).toBe(true);
+    expect(isEven(8)).toBe(true);
   });
   test('should be false', () => {
     expect(isEven(1)).toBe(false);
@@ -17,5 +18,8 @@ describe('isEven', () => {
     expect(isEven([])).toBe(false);
     expect(isEven({})).toBe(false);
     expect(isEven(null)).toBe(false);
+    expect(isEven(undefined)).toBe(false);
+    expect(isEven(()=>{})).toBe(false);
+    expect(isEven(new Date())).toBe(false);
   });
 });

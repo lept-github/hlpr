@@ -12,6 +12,8 @@ describe('isNotFunction', () => {
     expect(isNotFunction([])).toBe(true);
     expect(isNotFunction({})).toBe(true);
     expect(isNotFunction(null)).toBe(true);
+    expect(isNotFunction(undefined)).toBe(true);
+    expect(isNotFunction(new Date())).toBe(true);
   });
   test('should be false', () => {
     const myFunction = () => {};

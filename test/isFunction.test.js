@@ -15,8 +15,10 @@ describe('isFunction', () => {
     expect(isFunction(true)).toBe(false);
     expect(isFunction(false)).toBe(false);
     expect(isFunction('')).toBe(false);
+    expect(isFunction('function(){}')).toBe(false);
     expect(isFunction([])).toBe(false);
     expect(isFunction({})).toBe(false);
     expect(isFunction(null)).toBe(false);
+    expect(isFunction(undefined)).toBe(false);
   });
 });

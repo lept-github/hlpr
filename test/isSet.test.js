@@ -13,6 +13,8 @@ describe('isSet', () => {
     expect(isSet(function(){})).toBe(true);
     expect(isSet({test:123})).toBe(true);
     expect(isSet('test')).toBe(true);
+    expect(isSet('true')).toBe(true);
+    expect(isSet('false')).toBe(true);
     expect(isSet(new Date())).toBe(true);
   });
   test('should be false', () => {

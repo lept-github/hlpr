@@ -17,5 +17,7 @@ describe('isBinary', () => {
     expect(isBinary([])).toBe(false);
     expect(isBinary({})).toBe(false);
     expect(isBinary(null)).toBe(false);
+    expect(isBinary(undefined)).toBe(false);
+    expect(isBinary(()=>{})).toBe(false);
   });
 });

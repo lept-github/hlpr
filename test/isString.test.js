@@ -10,6 +10,9 @@ describe('isString', () => {
     expect(isString([])).toBe(false);
     expect(isString({})).toBe(false);
     expect(isString(null)).toBe(false);
+    expect(isString(undefined)).toBe(false);
+    expect(isString(()=>{})).toBe(false);
+    expect(isString(new Date())).toBe(false);
   });
   test('should be true - non strict', () => {
     expect(isString('test', false)).toBe(true);
@@ -19,6 +22,9 @@ describe('isString', () => {
     expect(isString(123, false)).toBe(false);
     expect(isString([], false)).toBe(false);
     expect(isString({}, false)).toBe(false);
-    expect(isString(null)).toBe(false);
+    expect(isString(null, false)).toBe(false);
+    expect(isString(undefined, false)).toBe(false);
+    expect(isString(()=>{}, false)).toBe(false);
+    expect(isString(new Date(), false)).toBe(false);
   });
 });

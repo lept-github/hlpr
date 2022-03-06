@@ -16,6 +16,7 @@ describe('isNotUndefined', () => {
     expect(isNotUndefined(function(){})).toBe(true);
     expect(isNotUndefined({test:123})).toBe(true);
     expect(isNotUndefined('test')).toBe(true);
+    expect(isNotUndefined('undefined')).toBe(true);
     expect(isNotUndefined(new Date())).toBe(true);
     expect(isNotUndefined(null)).toBe(true);
   });
