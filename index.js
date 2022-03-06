@@ -73,6 +73,9 @@ const isOdd = val => {
 const isObject = (val, strictMode = true) => {
   strictMode = (strictMode === true);
 
+  if( isArray(val, false) ){ return false; }
+  if( isDate(val) ){ return false; }
+
   if( strictMode === false && typeof val === 'object' ){
     return true;
   }
