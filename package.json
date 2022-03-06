@@ -1,0 +1,15 @@
+{
+  "name": "hlpr",
+  "description": "",
+  "homepage": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "lept",
+  "repository": {
+    "type": "git",
+    "url": "TBD"
+  },
+  "license": "ISC"
+}
