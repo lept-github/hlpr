@@ -13,12 +13,12 @@ or
 ## Import or Require
 
 ```
-const fleck = require('fleck-js');
-console.log(fleck.isArray([1,2,3])); // true
+const hlpr = require('hlpr');
+console.log(hlpr.isArray([1,2,3])); // true
 ```
 
 or
 
 ```
-import {isArray} from 'fleck-js';
+import { isArray } from 'hlpr';
 console.log(isArray([1,2,3])); // true
