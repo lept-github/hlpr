@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test2": "jest2",
     "test-coverage": "npx jest --coverage"
   },
   "keywords": [
