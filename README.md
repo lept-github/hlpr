@@ -50,7 +50,7 @@ It determines if the given value is FALSE.
 
 ### isBinary
 
-It determines if the given value is one of the following: true|false|0|1.
+It determines if the given value is one of the following: `true|false|0|1`.
 
 ### isBoolean
 
