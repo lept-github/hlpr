@@ -24,6 +24,8 @@ import { isArray } from 'hlpr';
 console.log(isArray([1,2,3])); // true
 ```
 
+## Popular Functions
+
 ### isArray
 
 It determines if the given value is an array.
