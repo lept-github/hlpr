@@ -30,82 +30,213 @@ console.log(isArray([1,2,3])); // true
 
 It determines if the given value is an array.
 
+`isArray(val, strictMode)`
+
+| Parameter        |Description                      |
+|------------------|---------------------------------|
+| val              |Required. The value to be tested.|
+| strictMode       |Optional. Defaults to true. Validation strategy, it determines if an empty array is valid or not.|
+
 ### isEmpty
 
 It determines if the given value is an empty/blank string.
+
+`isEmpty(val)`
+
+| Parameter        |Description                      |
+|------------------|---------------------------------|
+| val              |Required. The value to be tested.|
 
 ### isString
 
 It determines if the given value is a string.
 
+`isString(val, strictMode)`
+
+| Parameter        | Description                                                                                        |
+|------------------|----------------------------------------------------------------------------------------------------|
+| val              | Required. The value to be tested.                                                                  |
+| strictMode       | Optional. Defaults to true. Validation strategy, it determines if an empty string is valid or not. |
+
 ### isEmail
 
 It determines if the given value is an email.
+
+`isEmail(val)`
+
+| Parameter        |Description                      |
+|------------------|---------------------------------|
+| val              |Required. The value to be tested.|
 
 ### isTrue
 
 It determines if the given value is TRUE.
 
+`isTrue(val)`
+
+| Parameter        |Description                      |
+|------------------|---------------------------------|
+| val              |Required. The value to be tested.|
+
 ### isFalse
 
 It determines if the given value is FALSE.
+
+`isFalse(val)`
+
+| Parameter        |Description                      |
+|------------------|---------------------------------|
+| val              |Required. The value to be tested.|
 
 ### isBinary
 
 It determines if the given value is one of the following: `true|false|0|1`.
 
+`isBinary(val)`
+
+| Parameter        |Description                      |
+|------------------|---------------------------------|
+| val              |Required. The value to be tested.|
+
 ### isBoolean
 
 It determines if the given value is boolean.
+
+`isBoolean(val)`
+
+| Parameter        |Description                      |
+|------------------|---------------------------------|
+| val              |Required. The value to be tested.|
 
 ### isNumber
 
 It determines if the given value is numeric.
 
+`isNumber(val, strictMode)`
+
+| Parameter        | Description                                                                                                               |
+|------------------|---------------------------------------------------------------------------------------------------------------------------|
+| val              | Required. The value to be tested.                                                                                         |
+| strictMode       | Optional. Defaults to true. Validation strategy, it determines if numbers as strings are valid or not. |
+
 ### isInteger
 
 It determines if the given value is integer.
+
+`isInteger(val)`
+
+| Parameter        |Description                      |
+|------------------|---------------------------------|
+| val              |Required. The value to be tested.|
 
 ### isDecimal
 
 It determines if the given value is decimal or float.
 
+`isDecimal(val)`
+
+| Parameter        |Description                      |
+|------------------|---------------------------------|
+| val              |Required. The value to be tested.|
+
 ### isEven
 
 It determines if the given value is an even number.
+
+`isEven(val)`
+
+| Parameter        |Description                      |
+|------------------|---------------------------------|
+| val              |Required. The value to be tested.|
 
 ### isOdd
 
 It determines if the given value is an odd number.
 
+`isOdd(val)`
+
+| Parameter        |Description                      |
+|------------------|---------------------------------|
+| val              |Required. The value to be tested.|
+
 ### isObject
 
 It determines if the given value is an object.
+
+`isObject(val, strictMode)`
+
+| Parameter        | Description                                                                                                               |
+|------------------|---------------------------------------------------------------------------------------------------------------------------|
+| val              | Required. The value to be tested.                                                                                         |
+| strictMode       | Optional. Defaults to true. Validation strategy, it determines if an empty object is valid or not. |
 
 ### isFunction
 
 It determines if the given value is a function.
 
+`isFunction(val)`
+
+| Parameter        |Description                      |
+|------------------|---------------------------------|
+| val              |Required. The value to be tested.|
+
 ### isDate
 
 It determines if the given value is a date.
+
+`isDate(val)`
+
+| Parameter        |Description                      |
+|------------------|---------------------------------|
+| val              |Required. The value to be tested.|
 
 ### isSet
 
 It determines if the given value has been set as a string, number, date, array, object, etc.
 
+`isSet(val)`
+
+| Parameter        |Description                      |
+|------------------|---------------------------------|
+| val              |Required. The value to be tested.|
+
 ### isNull
 
 It determines if the given value is NULL.
+
+`isNull(val)`
+
+| Parameter        |Description                      |
+|------------------|---------------------------------|
+| val              |Required. The value to be tested.|
 
 ### isUndefined
 
 It determines if the given value UNDEFINED.
 
+`isUndefined(val)`
+
+| Parameter        |Description                      |
+|------------------|---------------------------------|
+| val              |Required. The value to be tested.|
+
 ### isJson
 
 It determines if the given value is a valid JSON.
 
+`isJson(val, strictMode)`
+
+| Parameter        | Description                                                                                             |
+|------------------|---------------------------------------------------------------------------------------------------------|
+| val              | Required. The value to be tested.                                                                       |
+| strictMode       | Optional. Defaults to true. Validation strategy, it determines if an empty JSON object is valid or not. |
+
 ### isType
 
 It returns the data type of the given value, number, string, array, etc.
+
+`isType(val)`
+
+| Parameter        |Description                      |
+|------------------|---------------------------------|
+| val              |Required. The value to be tested.|
