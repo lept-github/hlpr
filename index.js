@@ -94,6 +94,12 @@ const isEmail = val => {
   }
   return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(val);
 }
+const isSsn = val => {
+  if( isNotString(val) ){
+    return false;
+  }
+  return /^\d{3}-?\d{2}-?\d{4}$/.test(val);
+};
 const isFunction = val => (typeof val === 'function');
 const isNotFunction = (val, strictMode = true) => !isFunction(val, strictMode);
 const isDate = val => (val instanceof Date);
@@ -160,6 +166,7 @@ module.exports = {
   isObject,
   isNotObject,
   isEmail,
+  isSsn,
   isFunction,
   isNotFunction,
   isDate,

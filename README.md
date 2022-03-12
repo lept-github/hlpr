@@ -198,6 +198,16 @@ It determines if the given value has been set/declare as a string, number, date,
 |-----------|-----------------------------------|
 | val       | Required. The value to be tested. |
 
+### isSsn
+
+It determines if the given value is a valid formatted social security number.
+
+`isSsn(val)`
+
+| Parameter | Description                       |
+|-----------|-----------------------------------|
+| val       | Required. The value to be tested. |
+
 ### isString
 
 It determines if the given value is a string.
