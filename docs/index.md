@@ -249,7 +249,7 @@ It determines if the given value UNDEFINED.
 |-----------|-----------------------------------|
 | val       | Required. The value to be tested. |
 
-## Other Functions
+## Other Validation Functions
 
 ### isNotArray
 ### isNotBoolean
@@ -262,3 +262,27 @@ It determines if the given value UNDEFINED.
 ### isNotSet
 ### isNotString
 ### isNotUndefined
+
+## Array Sorting Functions
+
+### ascending
+
+It sorts arrays ascendingly.
+
+`[1,3,4,2].sort(ascending) // [1,2,3,4]`
+`['c','d','a','b'].sort(ascending) // ['a','b','c','d']`
+
+It also sorts array of objects, but it requires the property name to be sorted by.
+
+`[{prop:3}, {prop:1}, {prop:2}].sort(ascending('props')) // [{prop:1}, {prop:2}, {prop:3}]`
+
+### descending
+
+It sorts arrays descendingly.
+
+`[1,3,4,2].sort(descending) // [4,3,2,1]`
+`['c','d','a','b'].sort(descending) // ['d','c','b','a']`
+
+It also sorts array of objects, but it requires the property name to be sorted by.
+
+`[{prop:3}, {prop:1}, {prop:2}].sort(ascending('props')) // [{prop:3}, {prop:2}, {prop:1}]`
