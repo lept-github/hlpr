@@ -22,7 +22,7 @@ import { isArray } from 'hlpr';
 console.log(isArray([1,2,3])); // true
 ```
 
-## Popular Functions
+## Validation Functions
 
 ### isArray
 
@@ -200,7 +200,7 @@ It determines if the given value has been set/declare as a string, number, date,
 
 ### isSsn
 
-It determines if the given value is a valid formatted social security number.
+It determines if the given value is a valid format social security number. `000-00-0000`.
 
 `isSsn(val)`
 

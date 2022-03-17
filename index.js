@@ -146,6 +146,77 @@ const isType = val => {
   return '';
 };
 
+const sortString = (v1, v2) => {
+  const a = v1.toLowerCase();
+  const b = v2.toLowerCase();
+  if( a < b ){ return -1; }
+  if( a > b ){ return 1; }
+  return 0;
+};
+const sortNumber = (v1, v2) => v1 - v2;
+const ascending = (prop, prop2) => {
+  if( prop && prop2 ){
+    if( isString(prop) && isString(prop2) ){
+      return sortString(prop, prop2);
+    }
+    if( isNumber(prop) && isNumber(prop2) ){
+      return sortNumber(prop, prop2);
+    }
+    return 0;
+  }
+  if( prop ){
+    return (a, b) => {
+      if( isString(a[prop]) && isString(b[prop]) ){
+        return sortString(a[prop], b[prop]);
+      }
+      if( isNumber(a[prop]) && isNumber(b[prop]) ){
+        return sortNumber(a[prop], b[prop]);
+      }
+      return 0;
+    };
+  }
+  return (a, b) => {
+    if( isString(a) && isString(b) ){
+      return sortString(a, b);
+    }
+    if( isNumber(a) && isNumber(b) ){
+      return sortNumber(a, b);
+    }
+    return 0;
+  };
+};
+const descending = (prop,  prop2) => {
+  if( prop && prop2 ){
+    if( isString(prop) && isString(prop2) ){
+      return sortString(prop2, prop);
+    }
+    if( isNumber(prop) && isNumber(prop2) ){
+      return sortNumber(prop2, prop);
+    }
+    return 0;
+  }
+  if( prop ){
+    return (a, b) => {
+      if( isString(a[prop]) && isString(b[prop]) ){
+        return sortString(b[prop], a[prop]);
+      }
+      if( isNumber(a[prop]) && isNumber(b[prop]) ){
+        return sortNumber(b[prop], a[prop]);
+      }
+      return 0;
+    };
+  }
+  return (a, b) => {
+    if( isString(a) && isString(b) ){
+      return sortString(b, a);
+    }
+    if( isNumber(a) && isNumber(b) ){
+      return sortNumber(b, a);
+    }
+    return 0;
+  };
+};
+
 module.exports = {
   isEmpty,
   isString,
@@ -180,4 +251,6 @@ module.exports = {
   isJson,
   isNotJson,
   isType,
+  ascending,
+  descending,
 };
