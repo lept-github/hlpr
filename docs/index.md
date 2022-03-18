@@ -169,7 +169,7 @@ It determines if the given value is numeric.
 
 ### isObject
 
-It determines if the given value is an object.
+It determines if the given value is an object. It will return false for `Array` and `Date`.
 
 `isObject(val, strictMode)`
 
@@ -269,22 +269,22 @@ It determines if the given value UNDEFINED.
 
 It sorts arrays ascendingly.
 
-`[1,3,4,2].sort(ascending) // [1,2,3,4]`
+- `[1,3,4,2].sort(ascending) // [1,2,3,4]`
 
-`['c','d','a','b'].sort(ascending) // ['a','b','c','d']`
+- `['c','d','a','b'].sort(ascending) // ['a','b','c','d']`
 
 It also sorts array of objects, but it requires the property name to be sorted by.
 
-`[{prop:3}, {prop:1}, {prop:2}].sort(ascending('props')) // [{prop:1}, {prop:2}, {prop:3}]`
+`[{p:3}, {p:1}, {p:2}].sort(ascending('p')) // [{p:1}, {p:2}, {p:3}]`
 
 ### descending
 
 It sorts arrays descendingly.
 
-`[1,3,4,2].sort(descending) // [4,3,2,1]`
+- `[1,3,4,2].sort(descending) // [4,3,2,1]`
 
-`['c','d','a','b'].sort(descending) // ['d','c','b','a']`
+- `['c','d','a','b'].sort(descending) // ['d','c','b','a']`
 
 It also sorts array of objects, but it requires the property name to be sorted by.
 
-`[{prop:3}, {prop:1}, {prop:2}].sort(ascending('props')) // [{prop:3}, {prop:2}, {prop:1}]`
+`[{p:3}, {p:1}, {p:2}].sort(ascending('p')) // [{p:3}, {p:2}, {p:1}]`

@@ -1,3 +1,4 @@
+// validations
 const isEmpty = val => (val === '');
 const isString = (val, strictMode = true) => {
   strictMode = (strictMode === true);
@@ -146,6 +147,7 @@ const isType = val => {
   return '';
 };
 
+// array sorting
 const sortString = (v1, v2) => {
   const a = v1.toLowerCase();
   const b = v2.toLowerCase();
@@ -217,6 +219,47 @@ const descending = (prop,  prop2) => {
   };
 };
 
+// misc
+const jsonToStr = obj => {
+  if( isObject(obj) ){
+    try{
+      return JSON.stringify(obj);
+    }
+    catch( err ){
+      return null;
+    }
+  }
+  return null;
+};
+const strToJson = str => {
+  if( isString(str) ){
+    try{
+      return JSON.parse(str);
+    }
+    catch( err ){
+      return null;
+    }
+  }
+  return null;
+};
+const copy = val => {
+  if( isSet(val) ){
+    try{
+      return JSON.parse(JSON.stringify(val));
+    }
+    catch( err ){
+      return null;
+    }
+  }
+  return null;
+};
+const clone = obj => {
+  if( isObject(obj) ){
+    return {...{}, ...obj};
+  }
+  return null;
+};
+
 module.exports = {
   isEmpty,
   isString,
@@ -253,4 +296,8 @@ module.exports = {
   isType,
   ascending,
   descending,
+  jsonToStr,
+  strToJson,
+  copy,
+  clone,
 };

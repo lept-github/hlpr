@@ -169,7 +169,7 @@ It determines if the given value is numeric.
 
 ### isObject
 
-It determines if the given value is an object.
+It determines if the given value is an object. It will return false for `Array` and `Date`.
 
 `isObject(val, strictMode)`
 
