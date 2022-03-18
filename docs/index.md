@@ -270,6 +270,7 @@ It determines if the given value UNDEFINED.
 It sorts arrays ascendingly.
 
 `[1,3,4,2].sort(ascending) // [1,2,3,4]`
+
 `['c','d','a','b'].sort(ascending) // ['a','b','c','d']`
 
 It also sorts array of objects, but it requires the property name to be sorted by.
@@ -281,6 +282,7 @@ It also sorts array of objects, but it requires the property name to be sorted b
 It sorts arrays descendingly.
 
 `[1,3,4,2].sort(descending) // [4,3,2,1]`
+
 `['c','d','a','b'].sort(descending) // ['d','c','b','a']`
 
 It also sorts array of objects, but it requires the property name to be sorted by.
