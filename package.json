@@ -2,7 +2,7 @@
   "name": "hlpr",
   "description": "Javascript helper functions",
   "homepage": "https://github.com/lept-github/hlpr#readme",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "main": "index.js",
   "scripts": {
     "test": "jest",
