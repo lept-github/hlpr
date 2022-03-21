@@ -222,12 +222,7 @@ const descending = (prop,  prop2) => {
 // misc
 const jsonToStr = obj => {
   if( isObject(obj) ){
-    try{
-      return JSON.stringify(obj);
-    }
-    catch( err ){
-      return null;
-    }
+    return JSON.stringify(obj);
   }
   return null;
 };
