@@ -1,6 +1,5 @@
 # dev files & folders
 .idea
-package.json
 package-lock.json
 
 # Logs
