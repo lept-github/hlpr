@@ -1,5 +1,7 @@
 # dev files & folders
 .idea
+docs
+test
 
 # Logs
 logs
