@@ -43,13 +43,13 @@ describe('locStorage', () => {
 });
 
 describe('locStorageClear', () => {
-  test('should clear specific item from session storage', () => {
+  test('should clear specific item from local storage', () => {
     locStorage('test',123);
     expect(locStorage('test')).toBe(123);
     locStorageClear('test');
     expect(locStorage('test')).toBe(null);
   });
-  test('should clear all items from session storage', () => {
+  test('should clear all items from local storage', () => {
     locStorage('test1',123);
     locStorage('test2',456);
     expect(locStorage('test1')).toBe(123);
