@@ -1,4 +1,4 @@
-// validations
+// validation functions
 const isEmpty = val => (val === '');
 const isString = (val, strictMode = true) => {
   strictMode = (strictMode === true);
@@ -145,7 +145,7 @@ const isType = val => {
   return '';
 };
 
-// array sorting
+// array sorting functions
 const sortString = (v1, v2) => {
   const a = v1.toLowerCase();
   const b = v2.toLowerCase();
@@ -217,7 +217,8 @@ const descending = (prop,  prop2) => {
   };
 };
 
-// misc
+// TODO: documentation
+// misc functions
 const jsonToStr = obj => {
   if( isObject(obj) ){
     return JSON.stringify(obj);
@@ -252,6 +253,34 @@ const clone = obj => {
   }
   return null;
 };
+
+// TODO: documentation
+// session and local storage functions
+const browserStorage = (storage, key, value) => {
+  if( key && (value || [false,null,''].includes(value)) ){
+    if( isString(value,false) ){
+      storage.setItem(key,value);
+    } else {
+      storage.setItem(key,JSON.stringify(value));
+    }
+    return storage;
+  }
+
+  const item = storage.getItem(key);
+  try{ return JSON.parse(item); }
+  catch( err ){ return item; }
+};
+const browserStorageClear = (storage, key) => {
+  if( key ){
+    storage.removeItem(key);
+  } else {
+    storage.clear();
+  }
+};
+const sesStorage = (key, value) => browserStorage(sessionStorage, key, value);
+const sesStorageClear = key => browserStorageClear(sessionStorage, key);
+const locStorage = (key, value) => browserStorage(localStorage, key, value);
+const locStorageClear = key => browserStorageClear(localStorage, key);
 
 module.exports = {
   isEmpty,
@@ -293,4 +322,8 @@ module.exports = {
   strToJson,
   copy,
   clone,
+  sesStorage,
+  sesStorageClear,
+  locStorage,
+  locStorageClear,
 };
