@@ -144,6 +144,15 @@ const isType = val => {
   if( isBoolean(val) ){ return 'boolean'; }
   return '';
 };
+// TODO: documentation
+const isFalsy = val => {
+  if( isFalse(val) ){ return true; }
+  if( isEmpty(val) ){ return true; }
+  if( isNull(val) ){ return true; }
+  return isUndefined(val);
+};
+// TODO: documentation
+const isTruthy = val => !isFalsy(val);
 
 // array sorting functions
 const sortString = (v1, v2) => {
@@ -185,7 +194,7 @@ const ascending = (prop, prop2) => {
     return 0;
   };
 };
-const descending = (prop,  prop2) => {
+const descending = (prop, prop2) => {
   if( prop && prop2 ){
     if( isString(prop) && isString(prop2) ){
       return sortString(prop2, prop);
@@ -216,15 +225,18 @@ const descending = (prop,  prop2) => {
     return 0;
   };
 };
-
 // TODO: documentation
+const shuffle = () => 0.5 - Math.random();
+
 // misc functions
+// TODO: documentation
 const jsonToStr = obj => {
   if( isObject(obj) ){
     return JSON.stringify(obj);
   }
   return null;
 };
+// TODO: documentation
 const strToJson = str => {
   if( isString(str) ){
     try{
@@ -236,6 +248,7 @@ const strToJson = str => {
   }
   return null;
 };
+// TODO: documentation
 const copy = val => {
   if( isSet(val) ){
     try{
@@ -247,14 +260,24 @@ const copy = val => {
   }
   return null;
 };
+// TODO: documentation
 const clone = obj => {
   if( isObject(obj) ){
     return {...{}, ...obj};
   }
   return null;
 };
-
 // TODO: documentation
+const merge = (val1, val2) => {
+  if( isArray(val1, false) && isArray(val2, false) ){
+    return [...val1, ...val2];
+  }
+  if( isObject(val1, false) && isObject(val2, false) ){
+    return {...val1, ...val2};
+  }
+  return null;
+};
+
 // session and local storage functions
 const browserStorage = (storage, key, value) => {
   if( key && (value || [false,null,''].includes(value)) ){
@@ -277,9 +300,13 @@ const browserStorageClear = (storage, key) => {
     storage.clear();
   }
 };
+// TODO: documentation
 const sesStorage = (key, value) => browserStorage(sessionStorage, key, value);
+// TODO: documentation
 const sesStorageClear = key => browserStorageClear(sessionStorage, key);
+// TODO: documentation
 const locStorage = (key, value) => browserStorage(localStorage, key, value);
+// TODO: documentation
 const locStorageClear = key => browserStorageClear(localStorage, key);
 
 module.exports = {
@@ -313,15 +340,19 @@ module.exports = {
   isNotNull,
   isUndefined,
   isNotUndefined,
+  isFalsy,
+  isTruthy,
   isJson,
   isNotJson,
   isType,
   ascending,
   descending,
+  shuffle,
   jsonToStr,
   strToJson,
   copy,
   clone,
+  merge,
   sesStorage,
   sesStorageClear,
   locStorage,
