@@ -22,6 +22,7 @@ const isArray = (val, strictMode = true) => {
 const isNotArray = (val, strictMode = true) => !isArray(val, strictMode);
 const isTrue = val => (val === true);
 const isFalse = val => (val === false);
+const isBoolean = val => (isTrue(val) || isFalse(val));
 const isBinary = val => {
   if( isTrue(val) || isFalse(val) ){
     return true
@@ -31,14 +32,13 @@ const isBinary = val => {
   }
   return [0,1,'0','1'].includes(val) === true;
 };
-const isBoolean = val => (isTrue(val) || isFalse(val));
 const isNotBoolean = val => !isBoolean(val);
 const isNumber = (val, strictMode = true) => {
   strictMode = (strictMode === true);
 
   if( isDate(val) ){ return false; }
   if( isNull(val) ){ return false; }
-  if( val === '' ){ return false; }
+  if( isEmpty(val) ){ return false; }
 
   if( typeof val === 'number' ){
     return true;
@@ -100,9 +100,9 @@ const isSsn = val => {
   return /^\d{3}-?\d{2}-?\d{4}$/.test(val);
 };
 const isFunction = val => (typeof val === 'function');
-const isNotFunction = (val, strictMode = true) => !isFunction(val, strictMode);
+const isNotFunction = val => !isFunction(val);
 const isDate = val => (val instanceof Date);
-const isNotDate = (val, strictMode = true) => !isDate(val, strictMode);
+const isNotDate = val => !isDate(val);
 const isSet = val => {
   if( isArray(val) ){ return true; }
   if( isBoolean(val) ){ return true; }
