@@ -151,10 +151,9 @@ const isFalsy = val => {
   if( isNull(val) ){ return true; }
   return isUndefined(val);
 };
-// TODO: documentation
 const isTruthy = val => !isFalsy(val);
 
-// array sorting functions
+// array functions
 const sortString = (v1, v2) => {
   const a = v1.toLowerCase();
   const b = v2.toLowerCase();
@@ -236,7 +235,6 @@ const jsonToStr = obj => {
   }
   return null;
 };
-// TODO: documentation
 const strToJson = str => {
   if( isString(str) ){
     try{
@@ -248,7 +246,6 @@ const strToJson = str => {
   }
   return null;
 };
-// TODO: documentation
 const copy = val => {
   if( isSet(val) ){
     try{
@@ -260,14 +257,12 @@ const copy = val => {
   }
   return null;
 };
-// TODO: documentation
 const clone = obj => {
   if( isObject(obj) ){
     return {...{}, ...obj};
   }
   return null;
 };
-// TODO: documentation
 const merge = (val1, val2) => {
   if( isArray(val1, false) && isArray(val2, false) ){
     return [...val1, ...val2];
@@ -276,6 +271,12 @@ const merge = (val1, val2) => {
     return {...val1, ...val2};
   }
   return null;
+};
+const randomInt = (min, max) => {
+  if( isNotNumber(min) ){ return null; }
+  if( isNotNumber(max) ){ return null; }
+  if( min > max ){ return null; }
+  return Math.floor(Math.random() * (max - min +1) + min);
 };
 
 // session and local storage functions
@@ -302,11 +303,8 @@ const browserStorageClear = (storage, key) => {
 };
 // TODO: documentation
 const sesStorage = (key, value) => browserStorage(sessionStorage, key, value);
-// TODO: documentation
 const sesStorageClear = key => browserStorageClear(sessionStorage, key);
-// TODO: documentation
 const locStorage = (key, value) => browserStorage(localStorage, key, value);
-// TODO: documentation
 const locStorageClear = key => browserStorageClear(localStorage, key);
 
 module.exports = {
@@ -353,6 +351,7 @@ module.exports = {
   copy,
   clone,
   merge,
+  randomInt,
   sesStorage,
   sesStorageClear,
   locStorage,
