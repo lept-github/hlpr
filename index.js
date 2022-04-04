@@ -259,16 +259,16 @@ const copy = val => {
 };
 const clone = obj => {
   if( isObject(obj) ){
-    return {...{}, ...obj};
+    return Object.assign({}, obj);
   }
   return null;
 };
 const merge = (val1, val2) => {
   if( isArray(val1, false) && isArray(val2, false) ){
-    return [...val1, ...val2];
+    return [].concat(val1, val2);
   }
   if( isObject(val1, false) && isObject(val2, false) ){
-    return {...val1, ...val2};
+    return Object.assign({}, val1, val2);
   }
   return null;
 };
