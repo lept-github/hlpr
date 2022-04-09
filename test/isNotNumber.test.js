@@ -1,4 +1,4 @@
-const { isNotNumber } = require('../src/index');
+const { isNotNumber } = require('../index');
 
 describe('isNotNumber', () => {
   test('should be true', () => {

@@ -1,4 +1,4 @@
-const { isSet } = require('../src/index');
+const { isSet } = require('../index');
 
 describe('isSet', () => {
   test('should be true', () => {

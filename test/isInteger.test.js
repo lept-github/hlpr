@@ -1,4 +1,4 @@
-const { isInteger } = require('../src/index');
+const { isInteger } = require('../index');
 
 describe('isInteger', () => {
   test('should be true', () => {

@@ -1,4 +1,4 @@
-const { isFunction } = require('../src/index');
+const { isFunction } = require('../index');
 
 describe('isFunction', () => {
   test('should be true', () => {

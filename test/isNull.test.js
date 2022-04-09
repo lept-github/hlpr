@@ -1,4 +1,4 @@
-const { isNull } = require('../src/index');
+const { isNull } = require('../index');
 
 describe('isNull', () => {
   test('should be true', () => {

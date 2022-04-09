@@ -1,4 +1,4 @@
-const { isFalse } = require('../src/index');
+const { isFalse } = require('../index');
 
 describe('isFalse', () => {
   test('should be true', () => {

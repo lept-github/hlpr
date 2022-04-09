@@ -1,4 +1,5 @@
-const { jsonToStr } = require('../src/index');
+const { jsonToStr } = require('../index');
+
 
 describe('jsonToStr', () => {
   test('should convert json to string', () => {

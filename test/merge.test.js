@@ -1,4 +1,4 @@
-const { merge } = require('../src/index');
+const { merge } = require('../index');
 const toStr = v => JSON.stringify(v);
 
 describe('isFalsy', () => {

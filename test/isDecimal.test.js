@@ -1,4 +1,4 @@
-const { isDecimal } = require('../src/index');
+const { isDecimal } = require('../index');
 
 describe('isDecimal', () => {
   test('should be true', () => {

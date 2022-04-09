@@ -1,4 +1,4 @@
-const { copy } = require('../src/index');
+const { copy } = require('../index');
 
 describe('copy', () => {
   test('should copy strings', () => {

@@ -1,4 +1,4 @@
-const { isEven } = require('../src/index');
+const { isEven } = require('../index');
 
 describe('isEven', () => {
   test('should be true', () => {

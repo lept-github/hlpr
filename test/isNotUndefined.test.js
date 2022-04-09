@@ -1,4 +1,4 @@
-const { isNotUndefined } = require('../src/index');
+const { isNotUndefined } = require('../index');
 
 describe('isNotUndefined', () => {
   test('should be true', () => {

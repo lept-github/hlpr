@@ -1,4 +1,4 @@
-const { randomInt } = require('../src/index');
+const { randomInt } = require('../index');
 
 describe('randomInt', () => {
   test('should be between 1 and 0', () => {

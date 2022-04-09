@@ -1,4 +1,4 @@
-const { isNotBoolean } = require('../src/index');
+const { isNotBoolean } = require('../index');
 
 describe('isNotBoolean', () => {
   test('should be true', () => {

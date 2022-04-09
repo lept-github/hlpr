@@ -1,4 +1,4 @@
-const { isType } = require('../src/index');
+const { isType } = require('../index');
 
 describe('isType', () => {
   test('should return type', () => {

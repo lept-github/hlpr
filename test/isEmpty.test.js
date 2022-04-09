@@ -1,4 +1,4 @@
-const { isEmpty } = require('../src/index');
+const { isEmpty } = require('../index');
 
 describe('isEmpty', () => {
   test('should be true', () => {
