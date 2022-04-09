@@ -1,4 +1,4 @@
-const { isArray } = require('../index');
+const { isArray } = require('../src/index');
 
 describe('isArray', () => {
   test('should be true', () => {

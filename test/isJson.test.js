@@ -1,4 +1,4 @@
-const { isJson } = require('../index');
+const { isJson } = require('../src/index');
 
 describe('isJson', () => {
   test('should be true', () => {

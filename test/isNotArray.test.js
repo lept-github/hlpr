@@ -1,4 +1,4 @@
-const { isNotArray } = require('../index');
+const { isNotArray } = require('../src/index');
 
 describe('isNotArray', () => {
   test('should be true', () => {

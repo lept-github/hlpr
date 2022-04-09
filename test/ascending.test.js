@@ -1,4 +1,4 @@
-const { ascending } = require('../index');
+const { ascending } = require('../src/index');
 const toStr = arr => JSON.stringify(arr);
 
 describe('ascending', () => {

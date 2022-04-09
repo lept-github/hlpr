@@ -1,4 +1,4 @@
-const { isNotDate } = require('../index');
+const { isNotDate } = require('../src/index');
 
 describe('isNotDate', () => {
   test('should be true', () => {

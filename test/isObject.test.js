@@ -1,4 +1,4 @@
-const { isObject } = require('../index');
+const { isObject } = require('../src/index');
 
 describe('isObject', () => {
   test('should be true', () => {

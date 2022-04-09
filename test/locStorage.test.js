@@ -1,4 +1,4 @@
-const { locStorage, locStorageClear } = require('../index');
+const { locStorage, locStorageClear } = require('../src/index');
 const toStr = v => JSON.stringify(v);
 class storageMock {
   constructor() { this.store = {}; }

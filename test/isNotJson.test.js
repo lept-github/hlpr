@@ -1,4 +1,4 @@
-const { isNotJson } = require('../index');
+const { isNotJson } = require('../src/index');
 
 describe('isNotJson', () => {
   test('should be true', () => {

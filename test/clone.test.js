@@ -1,4 +1,4 @@
-const { clone } = require('../index');
+const { clone } = require('../src/index');
 
 describe('clone', () => {
   test('should clone objects', () => {

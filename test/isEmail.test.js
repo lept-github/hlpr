@@ -1,4 +1,4 @@
-const { isEmail } = require('../index');
+const { isEmail } = require('../src/index');
 
 describe('isEmail', () => {
   test('should be true', () => {

@@ -1,4 +1,4 @@
-const { shuffle } = require('../index');
+const { shuffle } = require('../src/index');
 const toStr = v => JSON.stringify(v);
 
 describe('shuffle', () => {

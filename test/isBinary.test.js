@@ -1,4 +1,4 @@
-const { isBinary } = require('../index');
+const { isBinary } = require('../src/index');
 
 describe('isBinary', () => {
   test('should be true', () => {

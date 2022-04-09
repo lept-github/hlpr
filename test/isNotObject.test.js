@@ -1,4 +1,4 @@
-const { isNotObject } = require('../index');
+const { isNotObject } = require('../src/index');
 
 describe('isNotObject', () => {
   test('should be true', () => {
